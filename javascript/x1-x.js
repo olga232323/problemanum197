@@ -1,7 +1,7 @@
-const x1 = ['BoJ ,dnameB sodn'];
+const x1 = 'BoJ ,dnameB sodn'; // No se deben poner [] porque sino x1 se trata como un solo elemento.
 var x = '';
 var j = 0;
-var caracteresCoincidentes = ['aeiouAEIOU'];
+var caracteresCoincidentes = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
 while (j < x1.length){
     if (!caracteresCoincidentes.includes(x1[j])){ //el caracter (j) que esta leyendo no es vocal (no esta en caracteresCoincidentes)
