@@ -4,8 +4,8 @@ _Activitat 4    Problema número 197_
 
 ## Realizado con
 
-* [VSCode]
-* [JavaScript]
+* VSCode
+* JavaScript
   
 ## Autores ✒
 
