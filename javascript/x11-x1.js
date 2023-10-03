@@ -1,23 +1,19 @@
-function codificarFrase(frase) {
-    let caracteres = frase.split('');
-    let longitud = caracteres.length;
-    let codificado = new Array(longitud);
+function codificarPalabra(palabra) {
+    const longitud = palabra.length;
+    let palabraCodificada = '';
+    let indiceInicio = 0;
+    let indiceFinal = longitud - 1;
 
-    for (let i = 0; i < longitud; i++) {
-        if (i % 2 === 0) {
-            codificado[i] = caracteres.shift();
-        } else {
-            codificado[i] = caracteres.pop();
+    while (indiceInicio <= indiceFinal) {
+        palabraCodificada += palabra[indiceInicio++];
+        if (indiceInicio <= indiceFinal) {
+            palabraCodificada += palabra[indiceFinal--];
         }
     }
 
-    return codificado.join('');
+    return palabraCodificada;
 }
 
-// Solicitar al usuario que ingrese una frase
-const fraseOriginal = prompt("Por favor, ingresa una frase:");
-const fraseCodificada = codificarFrase(fraseOriginal);
-
-// Mostrar la frase codificada
-console.log("Frase original: " + fraseOriginal);
-console.log("Frase codificada: " + fraseCodificada);
+const palabraOriginal = 'BoJ ,dnameB sodn'; // La palabra a codificar
+const palabraCodificada = codificarPalabra(palabraOriginal);
+console.log(palabraCodificada); // Debería imprimir 'BnodJo s, dBneam'
