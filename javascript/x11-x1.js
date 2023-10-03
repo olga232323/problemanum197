@@ -1,19 +1,19 @@
-function codificarPalabra(palabra) {
-    const longitud = palabra.length;
-    let palabraCodificada = '';
+function decodificarPalabra(palabraCodificada) {
+    const longitud = palabraCodificada.length;
+    let palabraOriginal = '';
     let indiceInicio = 0;
     let indiceFinal = longitud - 1;
 
     while (indiceInicio <= indiceFinal) {
-        palabraCodificada += palabra[indiceInicio++];
+        palabraOriginal += palabraCodificada[indiceInicio++];
         if (indiceInicio <= indiceFinal) {
-            palabraCodificada += palabra[indiceFinal--];
+            palabraOriginal += palabraCodificada[indiceFinal--];
         }
     }
 
-    return palabraCodificada;
+    return palabraOriginal;
 }
 
-const palabraOriginal = 'BoJ ,dnameB sodn'; // La palabra a codificar
-const palabraCodificada = codificarPalabra(palabraOriginal);
-console.log(palabraCodificada); // Debería imprimir 'BnodJo s, dBneam'
+const palabraCodificada = 'BoJ ,dnameB sodn'; // La palabra a decodificar
+const palabraOriginal = decodificarPalabra(palabraCodificada);
+console.log(palabraOriginal); // Debería imprimir 'BoJ ,dnameB sodn'
