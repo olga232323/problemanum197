@@ -37,7 +37,7 @@ function descodificar_x11() {
     } else {
         var posicionUltimoCaracter = x11.length - 2;
     }
-
+    var x1 = '';
     for (let i = 0; i < x11.length; i += 2) {
         x1 += x11[i];
     }
