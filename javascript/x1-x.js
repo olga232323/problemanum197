@@ -1,4 +1,4 @@
-function descodificar_x1(x1) {
+function desencriptar_x1(x1) {
     var x = '';
     var j = 0;
     var caracteresCoincidentes = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
@@ -20,5 +20,5 @@ function descodificar_x1(x1) {
     return x;
 }
 const x1 = 'BoJ ,dnameB sodn'; // No se deben poner [] porque sino x1 se trata como un solo elemento.
-const x = descodificar_x1(x1);
+const x = desencriptar_x1(x1);
 console.log(x);
