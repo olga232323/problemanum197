@@ -1,10 +1,8 @@
 // descodificación x'
-var x1 = document.getElementById("desencriptarx1");
-x1.addEventListener("blur", () => { descodificar_x1(x1.value) });
-
-
 
 function descodificar_x1(x1) {
+
+
     var x = '';
     var j = 0;
     var caracteresCoincidentes = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
@@ -29,9 +27,6 @@ const resultadox1 = descodificar_x1(x1);
 console.log(resultadox1);
 
 // descodificación x''
-
-var x11 = document.getElementById("desencriptarx11");
-x11.addEventListener("blur", () => { descodificar_x11(x11.value) });
 
 function descodificar_x11(x11) {
     var x1 = '';
