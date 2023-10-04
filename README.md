@@ -13,6 +13,7 @@ Hemos decidido crear el diagrama de la desencriptación de x'' -> x' con pseint.
 
 ## Explicación x' -> x
 Para demostrar que entendemos el funcionamiento del script de desencriptar x', explicaremos brevemente su funcionamiento.
+
 Primero inicializa una cadena vacía llamada x y un contador j en cero.
 Define un conjunto de caracteres llamado caracteresCoincidentes que contiene tanto vocales minúsculas como mayúsculas.
 Utiliza un bucle para recorrer la cadena de entrada x1 carácter por carácter.
