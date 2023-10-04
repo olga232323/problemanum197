@@ -9,16 +9,16 @@ function descodificar_x1() {
     var caracteresCoincidentes = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
 
     while (j < x1.length) {
-        if (!caracteresCoincidentes.includes(x1[j])) {
+        if (!caracteresCoincidentes.includes(x1[j])) { //el caracter (j) que esta leyendo no es vocal (no esta en caracteresCoincidentes)
             let sucesion = '';
             while (j < x1.length && !caracteresCoincidentes.includes(x1[j])) {
-                sucesion += x1[j];
+                sucesion += x1[j]; // crea la cadena sucesion sumando el caracter que no es vocal
                 j++;
             }
-            x += sucesion.split('').reverse().join('');
+            x += sucesion.split('').reverse().join(''); // Invertir la sucesión split separa los caracteres, reverse les da la vuelta en espejo y join los vuelve a juntar.
         } else {
-            x += x1[j];
-            j++;
+            x += x1[j]; // el caracter (j) que esta leyendo es vocal
+            j++; // suma el caracter j a la array x
         }
     }
     resultadoElement.textContent = x;
@@ -31,12 +31,11 @@ function descodificar_x11() {
     const x11 = inputElement.value;
 
     var x1 = '';
-    var posicionUltimoCaracter;
 
-    if (x11.length % 2 === 0) {
-        posicionUltimoCaracter = x11.length - 1;
+    if (x11.length % 2 === 0) { // verificar si la cadena de caracteres es impar o no, se recoje la posicion del ultimo caracter
+        var posicionUltimoCaracter = x11.length - 1;
     } else {
-        posicionUltimoCaracter = x11.length - 2;
+        var posicionUltimoCaracter = x11.length - 2;
     }
 
     for (let i = 0; i < x11.length; i += 2) {
