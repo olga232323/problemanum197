@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Descodificación</title>
 </head>
 
 <body>
-
     <h3>Descodificacion x'</h3>
     <input type="text" name="x1" id="desencriptarx1">
-
+    <button onclick="descodificar_x1()">Descodificar x'</button>
+    <p id="resultadox1"></p>
 
     <h3>Descodificacion x''</h3>
-    <input type="text" name="" id="desencriptarx11">
+    <input type="text" name="x11" id="desencriptarx11">
+    <button onclick="descodificar_x11()">Descodificar x''</button>
+    <p id="resultadox11"></p>
+
+    <script src="script.js"></script>
 </body>
 
-
 </html>
-
-<!-- En el desencriptador.js se pone lo siguiente: var x11 = document.getElementById("desencriptar"); x11.addEventListener("blur",() => {descodificar_x11(x11.value)}); -->
